@@ -279,7 +279,7 @@
   					var jwb19 = parseInt($("input[name='vitamin']:checked").val());
   					var jwb20 = parseInt($("input[name='berusia']:checked").val());
   					var jwb21 = parseInt($("input[name='penyakit']:checked").val());
-  					var skor = ((jwb1+jwb2+jwb3+jwb4+jwb5+jwb6+jwb7+jwb8+jwb9+jwb10+jwb11+jwb12+jwb13+jwb14+jwb15+jwb16+jwb17+jwb18+jwb19+jwb20+jwb21)/5*105).toFixed(2);
+  					var skor = ((jwb1+jwb2+jwb3+jwb4+jwb5+jwb6+jwb7+jwb8+jwb9+jwb10+jwb11+jwb12+jwb13+jwb14+jwb15+jwb16+jwb17+jwb18+jwb19+jwb20+jwb21)*105/21).toFixed(2);
   					if (skor==0) {
   						$('#hasil').attr({
   							'class':'alert alert-success',
