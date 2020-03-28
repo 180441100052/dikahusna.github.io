@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>PENILAIAN RESIKO PRIBADI TERKAIT COVID-19</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    	$(document).ready(function(){
+  			$('#pertanyaan1').hide();
+  			$('#pertanyaan2').hide();
+  			$('#pertanyaan3').hide();
+  			$('#pertanyaan4').hide();
+  			$('#pertanyaan5').hide();
+  			$('#pertanyaan6').hide();
+  			$('#pertanyaan7').hide();
+  			$('#pertanyaan8').hide();
+  			$('#pertanyaan9').hide();
+  			$('#pertanyaan10').hide();
+  			$('#pertanyaan11').hide();
+  			$('#pertanyaan12').hide();
+  			$('#pertanyaan13').hide();
+  			$('#pertanyaan14').hide();
+  			$('#pertanyaan15').hide();
+  			$('#pertanyaan16').hide();
+  			$('#pertanyaan17').hide();
+  			$('#pertanyaan18').hide();
+  			$('#pertanyaan19').hide();
+  			$('#pertanyaan20').hide();
+  			$('#pertanyaan21').hide();
+  			$('#hasil').hide();
+  			$('#hasil2').hide();
+  			$('#ulang').hide();
+ 
+  			$('#nama').keyup(function(){
+  				var text = $('#nama').val();
+  				$('h1').text('Halo, '+text+"!");
+  			});
+
+  			$('#form1').submit(function(){
+  				var text = $('#nama').val();
+  				if(text==""){
+  					alert("Nama harus diisi!");
+  					$('#nama').focus();
+  				}else{
+  					$('#form1').fadeOut(500);
+  					$('#pertanyaan1').delay(500).fadeIn(500);
+
+  				}
+  				$('#inialert').hide();
+  				event.preventDefault();
+  			});
+
+  			$('#klik1').click(function(){
+  				if ($('input[name="keluar"]:checked').length == 0){
+  					alert("Pilih salah satu!");
+  				}else{
+  					$('#pertanyaan1').fadeOut(500);
+  					$('#pertanyaan2').delay(500).fadeIn(500);
+  				}
+  				
+  				event.preventDefault();
+  			});
+
+  			$('#klik2').click(function(){
+  				if ($('input[name="transportasi"]:checked').length == 0){
+  					alert("Pilih salah satu!");
+  				}else{
+	  				$('#pertanyaan2').fadeOut(500);
+	  				$('#pertanyaan3').delay(500).fadeIn(500);
+  				}
+  				event.preventDefault();
+  			});
+
+  			$('#klik3').click(function(){
+  				if ($('input[name="masker"]:checked').length == 0){
+  					alert("Pilih salah satu!");
+  				}else{
+	  				$('#pertanyaan3').fadeOut(500);
+	  				$('#pertanyaan4').delay(500).fadeIn(500);
+  				}
+  				event.preventDefault();
+  			});
+
+  			$('#klik4').click(function(){
+  				if ($('input[name="berjabat"]:checked').length == 0){
+  					alert("Pilih salah satu!");
+  				}else{
+	  				$('#pertanyaan4').fadeOut(500);
+	  				$('#pertanyaan5').delay(500).fadeIn(500);
+  				}
+  				event.preventDefault();
+  			});
+
+  			$('#klik5').click(function(){
+  				if ($('input[name="tissue"]:checked').length == 0){
+  					alert("Pilih salah satu!");
+  				}else{
+	  				$('#pertanyaan5').fadeOut(500);
+	  				$('#pertanyaan6').delay(500).fadeIn(500);
+  				}
+  				event.preventDefault();
+  			});
+
+  			$('#klik6').click(function(){
+  				if ($('input[name="menyentuh"]:checked').length == 0){
+  					alert("Pilih salah satu!");
+  				}else{
+	  				$('#pertanyaan6').fadeOut(500);
+	  				$('#pertanyaan7').delay(500).fadeIn(500);
+  				}
+  				event.preventDefault();
+  			});
+
+  			$('#klik7').click(function(){
+  				if ($('input[name="jarak"]:checked').length == 0){
+  					alert("Pilih salah satu!");
+  				}else{
+	  				$('#pertanyaan7').fadeOut(500);
+	  				$('#pertanyaan8').delay(500).fadeIn(500);
+  				}
+  				event.preventDefault();
+  			});
+
+  			$('#klik8').click(function(){
+  				if ($('input[name="makan"]:checked').length == 0){
+  					alert("Pilih salah satu!");
+  				}else{
+	  				$('#pertanyaan8').fadeOut(500);
+	  				$('#pertanyaan9').delay(500).fadeIn(500);
+  				}
+  				event.preventDefault();
+  			});
+
+  			$('#klik9').click(function(){
+  				if ($('input[name="hangat"]:checked').length == 0){
+  					alert("Pilih salah satu!");
+  				}else{
+	  				$('#pertanyaan9').fadeOut(500);
+	  				$('#pertanyaan10').delay(500).fadeIn(500);
+  				}
+  				event.preventDefault();
+  			});
+
+  			$('#klik10').click(function(){
+  				if ($('input[name="kelurahan"]:checked').length == 0){
+  					alert("Pilih salah satu!");
+  				}else{
+	  				$('#pertanyaan10').fadeOut(500);
+	  				$('#pertanyaan11').delay(500).fadeIn(500);
+  				}
+  				event.preventDefault();
+  			});
+
+  			$('#klik11').click(function(){
+  				if ($('input[name="pintu"]:checked').length == 0){
+  					alert("Pilih salah satu!");
+  				}else{
+	  				$('#pertanyaan11').fadeOut(500);
+	  				$('#pertanyaan12').delay(500).fadeIn(500);
+  				}
+  				event.preventDefault();
+  			});
+
+  			$('#klik12').click(function(){
+  				if ($('input[name="dirumah"]:checked').length == 0){
+  					alert("Pilih salah satu!");
+  				}else{
+	  				$('#pertanyaan12').fadeOut(500);
+	  				$('#pertanyaan13').delay(500).fadeIn(500);
+  				}
+  				event.preventDefault();
+  			});
+
+  			$('#klik13').click(function(){
+  				if ($('input[name="antiseptic"]:checked').length == 0){
+  					alert("Pilih salah satu!");
+  				}else{
+	  				$('#pertanyaan13').fadeOut(500);
+	  				$('#pertanyaan14').delay(500).fadeIn(500);
+  				}
+  				event.preventDefault();
+  			});
+
+  			$('#klik14').click(function(){
+  				if ($('input[name="merendam"]:checked').length == 0){
+  					alert("Pilih salah satu!");
+  				}else{
+	  				$('#pertanyaan14').fadeOut(500);
+	  				$('#pertanyaan15').delay(500).fadeIn(500);
+  				}
+  				event.preventDefault();
+  			});
+
+  			$('#klik15').click(function(){
+  				if ($('input[name="keramas"]:checked').length == 0){
+  					alert("Pilih salah satu!");
+  				}else{
+	  				$('#pertanyaan15').fadeOut(500);
+	  				$('#pertanyaan16').delay(500).fadeIn(500);
+  				}
+  				event.preventDefault();
+  			});
+
+  			$('#klik16').click(function(){
+  				if ($('input[name="check"]:checked').length == 0){
+  					alert("Pilih salah satu!");
+  				}else{
+	  				$('#pertanyaan16').fadeOut(500);
+	  				$('#pertanyaan17').delay(500).fadeIn(500);
+  				}
+  				event.preventDefault();
+  			});
+
+  			$('#klik17').click(function(){
+  				if ($('input[name="matahari"]:checked').length == 0){
+  					alert("Pilih salah satu!");
+  				}else{
+	  				$('#pertanyaan17').fadeOut(500);
+	  				$('#pertanyaan18').delay(500).fadeIn(500);
+  				}
+  				event.preventDefault();
+  			});
+
+  			$('#klik18').click(function(){
+  				if ($('input[name="jalan"]:checked').length == 0){
+  					alert("Pilih salah satu!");
+  				}else{
+	  				$('#pertanyaan18').fadeOut(500);
+	  				$('#pertanyaan19').delay(500).fadeIn(500);
+  				}
+  				event.preventDefault();
+  			});
+
+  			$('#klik19').click(function(){
+  				if ($('input[name="vitamin"]:checked').length == 0){
+  					alert("Pilih salah satu!");
+  				}else{
+	  				$('#pertanyaan19').fadeOut(500);
+	  				$('#pertanyaan20').delay(500).fadeIn(500);
+  				}
+  				event.preventDefault();
+  			});
+
+  			$('#klik20').click(function(){
+  				if ($('input[name="berusia"]:checked').length == 0){
+  					alert("Pilih salah satu!");
+  				}else{
+	  				$('#pertanyaan20').fadeOut(500);
+	  				$('#pertanyaan21').delay(500).fadeIn(500);
+  				}
+  				event.preventDefault();
+  			});
+
+  			$('#klik21').click(function(){
+  				if ($('input[name="penyakit"]:checked').length == 0){
+  					alert("Pilih salah satu!");
+  				}else{
+  					$('#pertanyaan21').fadeOut(500);
+  					var jwb1 = parseInt($("input[name='keluar']:checked").val());
+  					var jwb2 = parseInt($("input[name='transportasi']:checked").val());
+  					var jwb3 = parseInt($("input[name='masker']:checked").val());
+  					var jwb4 = parseInt($("input[name='berjabat']:checked").val());
+  					var jwb5 = parseInt($("input[name='tissue']:checked").val());
+  					var jwb6 = parseInt($("input[name='menyentuh']:checked").val());
+  					var jwb7 = parseInt($("input[name='jarak']:checked").val());
+  					var jwb8 = parseInt($("input[name='makan']:checked").val());
+  					var jwb9 = parseInt($("input[name='hangat']:checked").val());
+  					var jwb10 = parseInt($("input[name='kelurahan']:checked").val());
+  					var jwb11 = parseInt($("input[name='pintu']:checked").val());
+  					var jwb12 = parseInt($("input[name='dirumah']:checked").val());
+  					var jwb13 = parseInt($("input[name='antiseptic']:checked").val());
+  					var jwb14 = parseInt($("input[name='merendam']:checked").val());
+  					var jwb15 = parseInt($("input[name='keramas']:checked").val());
+  					var jwb16 = parseInt($("input[name='check']:checked").val());
+  					var jwb17 = parseInt($("input[name='matahari']:checked").val());
+  					var jwb18 = parseInt($("input[name='jalan']:checked").val());
+  					var jwb19 = parseInt($("input[name='vitamin']:checked").val());
+  					var jwb20 = parseInt($("input[name='berusia']:checked").val());
+  					var jwb21 = parseInt($("input[name='penyakit']:checked").val());
+  					var skor = ((jwb1+jwb2+jwb3+jwb4+jwb5+jwb6+jwb7+jwb8+jwb9+jwb10+jwb11+jwb12+jwb13+jwb14+jwb15+jwb16+jwb17+jwb18+jwb19+jwb20+jwb21)/5*105).toFixed(2);
+  					if (skor==0) {
+  						$('#hasil').attr({
+  							'class':'alert alert-success',
+  						});
+  						$('#hasil').html("Resiko terkena COVID-19 <b>RENDAH</b> tetap jaga kesehatan dan tetap mengikuti protokoler pencegahan COVID-19 yang meliputi :</br>- Menyediakan <i>Thermo Gun Laser Infrared</i> / alat ukur suhu badan</br>- Menyediakan Hand sanitizer atau semacamnya</br>- Memakai masker jika keluar rumah </br>- Jaga jarak saat dikeramaian min 1.5 meter.");
+  						$('#hasil2').attr({
+  							'class':'alert alert-success',
+  						});
+  						$('#hasil2').text("Tetap jaga kesehatan Anda dan jangan lupa bahagia");
+  					}else if(skor<=35) {
+  						$('#hasil').attr({
+  							'class':'alert alert-info',
+  						});
+  						$('#hasil').html("Resiko terkena COVID-19 <b>SEDANG</b> tetap jaga kesehatan dan tetap mengikuti protokoler pencegahan COVID-19 yang meliputi :</br>- Menyediakan <i>Thermo Gun Laser Infrared</i> / alat ukur suhu badan</br>- Menyediakan Hand sanitizer atau semacamnya</br>- Memakai masker jika keluar rumah </br>- Jaga jarak saat dikeramaian min 1.5 meter.");
+  						$('#hasil2').attr({
+  							'class':'alert alert-warning',
+  						});
+  						$('#hasil2').text("Perlu waspada dan tetap jaga kesehatan. jika anda merasa tidak enak badan segeralah ke Rumah sakit terdekat");
+  					}else{
+  						$('#hasil').attr({
+  							'class':'alert alert-danger',
+  						});
+  						$('#hasil').html("Resiko terkena COVID-19 <b>TINGGI</b> tetap jaga kesehatan dan tetap mengikuti protokoler pencegahan COVID-19 yang meliputi :</br>- Menyediakan <i>Thermo Gun Laser Infrared</i> / alat ukur suhu badan</br>- Menyediakan Hand sanitizer atau semacamnya</br>- Memakai masker jika keluar rumah </br>- Jaga jarak saat dikeramaian min 1.5 meter.");
+  						$('#hasil2').attr({
+  							'class':'alert alert-danger',
+  						});
+  						$('#hasil2').text("Tetap waspada dan jaga kesehatan. jika badan terasa tidak enak dan suhu badan melibihi 37 C segeralah pergi ke Rumah Sakit terdekat.");
+  					}
+  					$('#hasil').delay(500).fadeIn(500);
+  					$('#hasil2').delay(500).fadeIn(500);
+  					$('#ulang').delay(500).fadeIn(500);
+  				}
+  				event.preventDefault();
+  			});
+
+  			$('#ulang').click(function(){
+  				location.reload();
+  			})
+
+  		});
+
+    </script>
+ 
+</head>
+<body class="container">
+	<nav class="navbar navbar-default">
+  		<div class="container-fluid">
+    		<div class="navbar-header">
+				<a class="navbar-brand" href="#" style="font-family: Adobe Fan Heiti Std B">Check List Penilaian Resiko Pribadi Terkait COVID-19</a>
+
+			</div>
+		</div>
+	</nav>
+<div class="alert alert-info">Sistem ini bisa mendeteksi potensi tertularnya COVID-19 sesuai kegiatan sehari-hari
+							kita.<b></br>Segera input nama Anda dan klik tombol mulai!</b>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+</div>
+<h1>Hallo,</h1>
+<form name="form1" id="form1">
+	<div class="row">
+		<div class="col-md-4">
+			<div class="form-group">
+				<input id="nama" type="text" placeholder="Ketik nama anda..." class="form-control">
+				<br>
+				<button id="tombol1" type="submit" class="btn btn-primary">Mulai</button>
+			</div>
+		</div>
+	</div>
+</form>
+
+<form id="form2" name="form2">
+	<div id="pertanyaan1">
+		<p>Saya pergi keluar dari rumah</p>
+	<div class="form-check">
+		<input class="form-check-input" type="radio" name="keluar" value="1">
+	  		<label class="form-check-label" for="keluar">
+	    		Ya
+	  		</label>
+		</div>
+		<div class="form-check">
+	  		<input class="form-check-input" type="radio" name="keluar" value="0">
+	  		<label class="form-check-label" for="keluar">
+	    		Tidak
+	  		</label>
+		</div>
+		<button id="klik1" class="btn btn-primary">Lanjut</button>
+	</div>
+
+	<div id="pertanyaan2">
+		<p>Saya menggunakan transportasi umum : Online, Angkot, Bus, Taxsi, Kereta api</p>
+	<div class="form-check">
+		<input class="form-check-input" type="radio" name="transportasi" value="1">
+	  		<label class="form-check-label" for="transportasi">
+	    		Ya
+	  		</label>
+		</div>
+		<div class="form-check">
+	  		<input class="form-check-input" type="radio" name="transportasi" value="0">
+	  		<label class="form-check-label" for="transportasi">
+	    		Tidak
+	  		</label>
+		</div>
+		<button id="klik2" class="btn btn-primary">Lanjut</button>
+	</div>
+
+	<div id="pertanyaan3">
+		<p>Saya tidak memakai masker saat berkumpul dengan orang lain</p>
+	<div class="form-check">
+		<input class="form-check-input" type="radio" name="masker" value="1">
+	  		<label class="form-check-label" for="masker">
+	    		Ya
+	  		</label>
+		</div>
+		<div class="form-check">
+	  		<input class="form-check-input" type="radio" name="masker" value="0">
+	  		<label class="form-check-label" for="masker">
+	    		Tidak
+	  		</label>
+		</div>
+		<button id="klik3" class="btn btn-primary">Lanjut</button>
+	</div>
+	
+	<div id="pertanyaan4">
+		<p>Saya berjabat tangan dengan orang lain</p>
+	<div class="form-check">
+		<input class="form-check-input" type="radio" name="berjabat" value="1">
+	  		<label class="form-check-label" for="berjabat">
+	    		Ya
+	  		</label>
+		</div>
+		<div class="form-check">
+	  		<input class="form-check-input" type="radio" name="berjabat" value="0">
+	  		<label class="form-check-label" for="berjabat">
+	    		Tidak
+	  		</label>
+		</div>
+		<button id="klik4" class="btn btn-primary">Lanjut</button>
+	</div>
+
+	<div id="pertanyaan5">
+		<p>Saya tidak membersihkan tangan dengan hand sanitizer/tissue basah sebelum pegang kemudi mobil/motor</p>
+	<div class="form-check">
+		<input class="form-check-input" type="radio" name="tissue" value="1">
+	  		<label class="form-check-label" for="tissue">
+	    		Ya
+	  		</label>
+		</div>
+		<div class="form-check">
+	  		<input class="form-check-input" type="radio" name="tissue" value="0">
+	  		<label class="form-check-label" for="tissue">
+	    		Tidak
+	  		</label>
+		</div>
+		<button id="klik5" class="btn btn-primary">Lanjut</button>
+	</div>
+
+	<div id="pertanyaan6">
+		<p>Saya menyentuh benda/uang yang juga di sentuh orang lain</p>
+	<div class="form-check">
+		<input class="form-check-input" type="radio" name="menyentuh" value="1">
+	  		<label class="form-check-label" for="menyentuh">
+	    		Ya
+	  		</label>
+		</div>
+		<div class="form-check">
+	  		<input class="form-check-input" type="radio" name="menyentuh" value="0">
+	  		<label class="form-check-label" for="menyentuh">
+	    		Tidak
+	  		</label>
+		</div>
+		<button id="klik6" class="btn btn-primary">Lanjut</button>
+	</div>
+
+	<div id="pertanyaan7">
+		<p>Saya tidak menjaga jarak 1,5 meter dengan orang lain ketika: belanja, bekerja, belajar, ibadah</p>
+	<div class="form-check">
+		<input class="form-check-input" type="radio" name="jarak" value="1">
+	  		<label class="form-check-label" for="jarak">
+	    		Ya
+	  		</label>
+		</div>
+		<div class="form-check">
+	  		<input class="form-check-input" type="radio" name="jarak" value="0">
+	  		<label class="form-check-label" for="jarak">
+	    		Tidak
+	  		</label>
+		</div>
+		<button id="klik7" class="btn btn-primary">Lanjut</button>
+	</div>
+
+	<div id="pertanyaan8">
+		<p>Saya makan diluar (warung/restoran)</p>
+	<div class="form-check">
+		<input class="form-check-input" type="radio" name="makan" value="1">
+	  		<label class="form-check-label" for="makan">
+	    		Ya
+	  		</label>
+		</div>
+		<div class="form-check">
+	  		<input class="form-check-input" type="radio" name="makan" value="0">
+	  		<label class="form-check-label" for="makan">
+	    		Tidak
+	  		</label>
+		</div>
+		<button id="klik8" class="btn btn-primary">Lanjut</button>
+	</div>
+
+	<div id="pertanyaan9">
+		<p>Saya tidak minum hangat & cuci tangan dengan sabun setelah tiba di tujuan</p>
+	<div class="form-check">
+		<input class="form-check-input" type="radio" name="hangat" value="1">
+	  		<label class="form-check-label" for="hangat">
+	    		Ya
+	  		</label>
+		</div>
+		<div class="form-check">
+	  		<input class="form-check-input" type="radio" name="hangat" value="0">
+	  		<label class="form-check-label" for="hangat">
+	    		Tidak
+	  		</label>
+		</div>
+		<button id="klik9" class="btn btn-primary">Lanjut</button>
+	</div>
+
+	<div id="pertanyaan10">
+		<p>Saya berada diwilayah kelurahan tempat pasien tertular</p>
+	<div class="form-check">
+		<input class="form-check-input" type="radio" name="kelurahan" value="1">
+	  		<label class="form-check-label" for="kelurahan">
+	    		Ya
+	  		</label>
+		</div>
+		<div class="form-check">
+	  		<input class="form-check-input" type="radio" name="kelurahan" value="0">
+	  		<label class="form-check-label" for="kelurahan">
+	    		Tidak
+	  		</label>
+		</div>
+		<button id="klik10" class="btn btn-primary">Lanjut</button>
+	</div>
+
+	<div id="pertanyaan11">
+		<p>Saya tidak pasang hand sanitizer didepan pintu masuk, untuk bersihkan tangan sebelum pegang ganggang
+		pintu masuk rumah</p>
+	<div class="form-check">
+		<input class="form-check-input" type="radio" name="pintu" value="1">
+	  		<label class="form-check-label" for="pintu">
+	    		Ya
+	  		</label>
+		</div>
+		<div class="form-check">
+	  		<input class="form-check-input" type="radio" name="pintu" value="0">
+	  		<label class="form-check-label" for="pintu">
+	    		Tidak
+	  		</label>
+		</div>
+		<button id="klik11" class="btn btn-primary">Lanjut</button>
+	</div>
+
+	<div id="pertanyaan12">
+		<p>Saya tidak mencuci tangan dengan sabun setelah sampai dirumah</p>
+	<div class="form-check">
+		<input class="form-check-input" type="radio" name="dirumah" value="1">
+	  		<label class="form-check-label" for="dirumah">
+	    		Ya
+	  		</label>
+		</div>
+		<div class="form-check">
+	  		<input class="form-check-input" type="radio" name="dirumah" value="0">
+	  		<label class="form-check-label" for="dirumah">
+	    		Tidak
+	  		</label>
+		</div>
+		<button id="klik12" class="btn btn-primary">Lanjut</button>
+	</div>
+
+	<div id="pertanyaan13">
+		<p>Saya tidak menyediakan: tissue basah/antiseptic, masker, sabun antiseptic bagi keluarga dirumah</p>
+	<div class="form-check">
+		<input class="form-check-input" type="radio" name="antiseptic" value="1">
+	  		<label class="form-check-label" for="antiseptic">
+	    		Ya
+	  		</label>
+		</div>
+		<div class="form-check">
+	  		<input class="form-check-input" type="radio" name="antiseptic" value="0">
+	  		<label class="form-check-label" for="antiseptic">
+	    		Tidak
+	  		</label>
+		</div>
+		<button id="klik13" class="btn btn-primary">Lanjut</button>
+	</div>
+
+	<div id="pertanyaan14">
+		<p>Saya tidak segera merendam baju & celana bekas pakai diluar rumah kedalam air panas atau sabun</p>
+	<div class="form-check">
+		<input class="form-check-input" type="radio" name="merendam" value="1">
+	  		<label class="form-check-label" for="merendam">
+	    		Ya
+	  		</label>
+		</div>
+		<div class="form-check">
+	  		<input class="form-check-input" type="radio" name="merendam" value="0">
+	  		<label class="form-check-label" for="merendam">
+	    		Tidak
+	  		</label>
+		</div>
+		<button id="klik14" class="btn btn-primary">Lanjut</button>
+	</div>
+
+	<div id="pertanyaan15">
+		<p>Saya tidak segera mandi keramas setelah saya tiba dirumah</p>
+	<div class="form-check">
+		<input class="form-check-input" type="radio" name="keramas" value="1">
+	  		<label class="form-check-label" for="keramas">
+	    		Ya
+	  		</label>
+		</div>
+		<div class="form-check">
+	  		<input class="form-check-input" type="radio" name="keramas" value="0">
+	  		<label class="form-check-label" for="keramas">
+	    		Tidak
+	  		</label>
+		</div>
+		<button id="klik15" class="btn btn-primary">Lanjut</button>
+	</div>
+
+	<div id="pertanyaan16">
+		<p>Saya tidak mensosialisasikan check list penilaian resiko pribadi ini kepada keluarga dirumah</p>
+	<div class="form-check">
+		<input class="form-check-input" type="radio" name="check" value="1">
+	  		<label class="form-check-label" for="check">
+	    		Ya
+	  		</label>
+		</div>
+		<div class="form-check">
+	  		<input class="form-check-input" type="radio" name="check" value="0">
+	  		<label class="form-check-label" for="check">
+	    		Tidak
+	  		</label>
+		</div>
+		<button id="klik16" class="btn btn-primary">Lanjut</button>
+	</div>
+
+	<div id="pertanyaan17">
+		<p>Saya dalam sehari tidak kena sinar matahari minimal 15 menit</p>
+	<div class="form-check">
+		<input class="form-check-input" type="radio" name="matahari" value="1">
+	  		<label class="form-check-label" for="matahari">
+	    		Ya
+	  		</label>
+		</div>
+		<div class="form-check">
+	  		<input class="form-check-input" type="radio" name="matahari" value="0">
+	  		<label class="form-check-label" for="matahari">
+	    		Tidak
+	  		</label>
+		</div>
+		<button id="klik17" class="btn btn-primary">Lanjut</button>
+	</div>
+
+	<div id="pertanyaan18">
+		<p>Saya tidak jalan kaki/berolahraga miimal 30 menit setiap hari</p>
+	<div class="form-check">
+		<input class="form-check-input" type="radio" name="jalan" value="1">
+	  		<label class="form-check-label" for="jalan">
+	    		Ya
+	  		</label>
+		</div>
+		<div class="form-check">
+	  		<input class="form-check-input" type="radio" name="jalan" value="0">
+	  		<label class="form-check-label" for="jalan">
+	    		Tidak
+	  		</label>
+		</div>
+		<button id="klik18" class="btn btn-primary">Lanjut</button>
+	</div>
+
+	<div id="pertanyaan19">
+		<p>Saya jarang minum vitamin C & E dan kurang tidur</p>
+	<div class="form-check">
+		<input class="form-check-input" type="radio" name="vitamin" value="1">
+	  		<label class="form-check-label" for="vitamin">
+	    		Ya
+	  		</label>
+		</div>
+		<div class="form-check">
+	  		<input class="form-check-input" type="radio" name="vitamin" value="0">
+	  		<label class="form-check-label" for="vitamin">
+	    		Tidak
+	  		</label>
+		</div>
+		<button id="klik19" class="btn btn-primary">Lanjut</button>
+	</div>
+
+	<div id="pertanyaan20">
+		<p>Saya berusia lebih dari 60 tahun</p>
+	<div class="form-check">
+		<input class="form-check-input" type="radio" name="berusia" value="1">
+	  		<label class="form-check-label" for="berusia">
+	    		Ya
+	  		</label>
+		</div>
+		<div class="form-check">
+	  		<input class="form-check-input" type="radio" name="berusia" value="0">
+	  		<label class="form-check-label" for="berusia">
+	    		Tidak
+	  		</label>
+		</div>
+		<button id="klik20" class="btn btn-primary">Lanjut</button>
+	</div>
+
+	<div id="pertanyaan21">
+		<p>Saya mempunyai penyakit jantung/diabetes/gangguan pernafasan kronik</p>
+	<div class="form-check">
+		<input class="form-check-input" type="radio" name="penyakit" value="1">
+	  		<label class="form-check-label" for="penyakit">
+	    		Ya
+	  		</label>
+		</div>
+		<div class="form-check">
+	  		<input class="form-check-input" type="radio" name="penyakit" value="0">
+	  		<label class="form-check-label" for="penyakit">
+	    		Tidak
+	  		</label>
+		</div>
+		<button id="klik21" class="btn btn-primary">Lanjut</button>
+	</div>
+
+	<div id="hasil" class="alert" role="alert">
+		
+	</div>
+	<div id="hasil2" class="alert" role="alert">
+		
+	</div>
+	<br>
+	<button class="btn btn-primary" id="ulang">Ulangi</button>
+	
+</form>
+		<div class="container-fluid">
+			<center>
+				<p style="color: silver"><small>
+				M. Dika Al Husna - 180441100052 <br>
+				Sistem Informasi - Universitas Trunojoyo Madura
+				</small></p>
+			</center>
+		</div>
+</body>
+</html>
